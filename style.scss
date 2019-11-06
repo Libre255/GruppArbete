@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono:100,400&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+$fontFamilyHeaders: 'Roboto Condensed', sans-serif;
+$fontFamilyParagraphs: 'Roboto Mono', monospace;
+$primaryBtn: #ddd;
+$textColor: black;
+$backgroundColor: rgb(219,210,203);
+
+html {
+  scroll-behavior: smooth;
+  background-color: $backgroundColor;
+  border: 1.2em solid white;
+
+}
+
+header {
+  text-align: center;
+  background-color: $backgroundColor;
+
+  h1 {
+    font-size:3.4em;
+  }
+  p {
+    margin:1em;
+  }
+  .hero-image {
+    height: 40em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  #heroimage {
+    position: relative;
+    right: 25%;
+  }
+  .hero-text {
+    
+    position: absolute;
+    top: 45%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    color: $textColor;
+    width: 50%;
+  }
+  .hero-text h1 {
+    font-family: $fontFamilyHeaders;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .hero-text p {
+    font-family: $fontFamilyParagraphs;
+    font-weight: lighter;
+  }
+  
+  button {
+    font-family: $fontFamilyParagraphs;
+    font-weight: lighter;
+    font-size:1em;
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: $primaryBtn;
+    margin: 1em;
+  
+    cursor: pointer;
+    &:hover {
+      background-color: #555;
+      color: white;
+    }
+  }
+  
+  
+ 
+}
+#about {
+	width: 100%;
+  text-align: left;
+  h2, h3 {
+    font-family: $fontFamilyHeaders;
+    font-size: 2.1em;
+    text-transform: uppercase;
+    margin: 1.5rem auto;
+    letter-spacing: 0.2em;
+   
+  }
+  h3 {
+    font-size: 1.1em;
+  }
+  p {
+    font-family: $fontFamilyParagraphs;
+    font-weight: lighter;
+  }
+  .grid-container-about {
+    display: grid;
+    grid-template-columns:repeat(2, 2fr);
+    grid-gap:2rem;
+    width: 90%;
+    margin:5.1rem 4rem;
+  }
+  .grid-item-text {
+    width: 80%;
+  }
+ .grid-item-image {
+   margin-top:3em;
+ }
+ 
+}
+#time {
+  margin:5.1rem 4rem;
+  h2 {
+    font-family: $fontFamilyHeaders;
+    font-size: 2.1em;
+    text-transform: uppercase;
+    margin: 1.5rem auto;
+    letter-spacing: 0.2em;
+  }
+  p {
+    font-family: $fontFamilyParagraphs;
+    font-weight: lighter;
+    margin-bottom: 1.5em;
+  }
+  #form {
+    font-family: $fontFamilyParagraphs;
+    font-weight: lighter;
+    input {
+      padding:1em;
+      font-family: $fontFamilyParagraphs;
+      font-weight: lighter;
+    }
+    #station, #measureParameters {
+      padding:1em;
+      font-family: $fontFamilyParagraphs;
+      font-weight: lighter;
+    }
+  }
+  #historic-data {
+    margin: 1.5rem auto;
+    font-family: $fontFamilyParagraphs;
+    font-weight: lighter;
+  }
+}
+
+
+
