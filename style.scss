@@ -29,16 +29,14 @@ header {
   }
   .hero-image {
     height: 40em;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    // position: relative;
   }
   #heroimage {
     position: relative;
-    right: 25%;
+    right: 25vw;
+    width: 40%;
   }
   .hero-text {
-    
     position: absolute;
     top: 45%;
     left: 70%;
@@ -146,5 +144,44 @@ header {
   }
 }
 
+/* @Media
+-------------------------------------------------- */
+@media only screen and (max-width: 600px) {
+  #heroimage {
+    display: none;
+  }
+  .hero-text {
+    h1 {
+      font-size: 2.1em;
+      margin-left: -4em;
+    }
+    p {
+      font-size: 0.8em;
+      margin-left: -9.6em;
+    }
+    button {
+      margin-left: -7.8em;
+    }
+  }
+  #about {
+    margin-left: 0em;
+    .grid-container-about {
+      display:block;
+      margin: 1em 2.1em
+    }
+    .grid-item-text {
+      width: 80%;
+    }
+    h2 {
+      font-size: 1.1em;
+    }
+
+  }
+  #time {
+    h2 {
+      font-size: 1.1em;
+  }
+}
+}
 
 

@@ -27,14 +27,12 @@ header p {
 
 header .hero-image {
   height: 40em;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
 }
 
 header #heroimage {
   position: relative;
-  right: 25%;
+  right: 25vw;
+  width: 40%;
 }
 
 header .hero-text {
@@ -156,5 +154,40 @@ header button:hover {
   margin: 1.5rem auto;
   font-family: "Roboto Mono", monospace;
   font-weight: lighter;
+}
+
+/* @Media
+-------------------------------------------------- */
+@media only screen and (max-width: 600px) {
+  #heroimage {
+    display: none;
+  }
+  .hero-text h1 {
+    font-size: 2.1em;
+    margin-left: -4em;
+  }
+  .hero-text p {
+    font-size: 0.8em;
+    margin-left: -9.6em;
+  }
+  .hero-text button {
+    margin-left: -7.8em;
+  }
+  #about {
+    margin-left: 0em;
+  }
+  #about .grid-container-about {
+    display: block;
+    margin: 1em 2.1em;
+  }
+  #about .grid-item-text {
+    width: 80%;
+  }
+  #about h2 {
+    font-size: 1.1em;
+  }
+  #time h2 {
+    font-size: 1.1em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
