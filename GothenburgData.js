@@ -33,8 +33,8 @@ async function AgnesbergTnvData(){
     let getData = await fetch(Levgrensvagen)
     let convert = await getData.json()
     AgnesbergTnv[0].Level = convert[0]
-    let tesaa = document.getElementById("test")
-    tesaa.innerHTML = `hELLO : ${AgnesbergTnv[0].Level.TimeStamp}` // This is how you insert Via DOM 
+    // let tesaa = document.getElementById("test")
+    // tesaa.innerHTML = `hELLO : ${AgnesbergTnv[0].Level.TimeStamp}` // This is how you insert Via DOM 
 }
 AgnesbergTnvData()
 
