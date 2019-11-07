@@ -3,11 +3,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Grupparbete</title>
+  <title>Vattennivån i Mölndalsån</title>
   <link rel="stylesheet" href="style.css">
-  <script src="index.js"></script>
 </head>
 <body>
+  <header>
+      <div class="hero-image">
+        <img id="heroimage" src="karta.svg"  alt="karta">
+      
+          <div class="hero-text">
+            <h1>Vattennivån i Mölndalsån</h1>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sunt possimus cumque asperiores aspernatur dicta repellat ratione vero amet quaerat modi ipsam dolore assumenda qui beatae autem, non sint optio.</p>
+            <a href="#map"><button>Testa tjänsten</button></a>
+          </div>
+        </div>
+  </header>
+  <main>
+  <section id="about">
+    <div class="grid-container-about">
+      <div class="grid-item-text">
+        
+        <h2>Mölndalsån  – reglerad livsnerv  genom tre kommuner</h2>
+        <p>Mölndalsån är ett över 40 kilometer långt vattensystem som rinner från Nedsjöarna i Hindås via Landvettersjön, till Rådasjön och Stensjön i Mölndal och kanalerna i centrala Göteborg, för att till slut mynna ut i Göta Älv. Högsta fallhöjden har ån i backen vid Mölndals kvarnby. För att ta tillvara kraften i fallen har ån ända sedan medeltiden  reglerats  och  använts  för  att  driva  kvarnar  och  annan industri. Fram till sekelskiftet 1900 var Mölndalsån en viktig transportled för att transportera människor och varor mellan Mölndal och Göteborg.</p>
+        <h3>Tre viktiga steg för bättre vattenkontroll</h3>
+        <p>De fem dämmen som finns i Mölndalsåns huvudfåra har olika ägare och styrs av lokala vattendomar. Varje ägare är skyldig att följa de regler som satts upp för dämmet. Förr i tiden, när man hämtade kraft ur systemet, låg  man hellre på höga nivåer än låga. Rikliga flöden nedströms satte fart på verksamheterna i Mölndals kvarnby. I  dagens läge, med exploatering och hårdgöring av närliggande mark och med pågående klimatförändringar som kan innebära översvämningar eller torka, är det nödvändigt att kunna styra vattenmängderna. Att samordna vattendomarna och få alla ägare att ta gemensamma beslut har därför varit en av de mest angelägna åtgärderna för att få en bra och fungerande samverkan kring regleringen av vattnet. </p>
+      </div>
+      <div class="grid-item-image">
+        <img src="vatten.svg" alt="en vattenvåg med en sol">
+      </div>
+     
+    </div>
+    
+        <!-- <img id="vattenbild" src="vatten.jpg" alt="en vattenvåg">
+        
+        
+            <h3>Å med rik och spännande natur</h3>
+            <p>Mölndalsån  har  sin  källa  i  en  liten  bäck  uppe  i  skogarna  i  Hindås. Vattnet passerar Nedsjöarna, Landvettersjön, Råda-sjön och Stensjön innan det kastar sig utför fallen i Mölndals kråka.  Ibland  är  vattnet  stillsamt,  ibland  forsar  det  vildsint  genom skogen. Den  omväxlande  naturen  är  en  fantastisk  tillgång  för  stor-stadsnära rekreation och friluftsliv. Trots att människan under lång tid påverkat miljön i området, framförallt med bebyg-gelse och vägar, så har biologer (Mölndals vattenråd, 2011) kunnat  visa  på  mycket  stora  naturvärden  i  området.  Det  finns  ekologiskt  värdefulla  områden  med  våtmarker  och  svämskogar och ur fiskeribiologisk synpunkt bedöms vatten-systemet som mycket intressant.
+            </p> -->
+        
+   
+    
+  </section>
+
+  <section id="time">
+    <div id="map">
+        <img src="karta.png" width="100%" alt="karta över göteborg">
+
+
+    </div>
+      <!-- Här ligger kartan -->
+    <h2>Historisk data</h2>
+    <p>Här kan du hämta historisk data genom att välja datum, mätstation och vilka mätsparametrar du vill hämta.</p>
+    <div id="form">
+        <label for="start">Datum:</label>
+        <input type="date" id="start" name="trip-start" value="YYYY-MM-DD">
+        <label for="station">Mätstation:</label>
+        <select id="station" name="station">
+          <option value="Agnesberg">Agnesberg</option>
+          <option value="Arketjarn">Arketjärn</option>
+          <option value="Eriksberg">Eriksberg</option>
+          <option value="Garda">Gårda</option>
+          <option value="Harsjö">Härsjö</option>
+          <option value="Kalleredsbacken">Kålleredsbäcken</option>
+          <option value="Landvettersjons">Landvettersjöns dämme</option>
+          <option value="Levgrensvagen">Levgrensvägen</option>
+          <option value="Larjeholm">Lärjeholm</option>
+          <option value="Molndal">Mölndal C</option>
+          <option value="Nedsjons">Nedsjöns dämme</option>
+          <option value="Radasjon">Rådasjön</option>
+          <option value="Skars">Skårs led</option>
+          <option value="Slussen">Slussen</option>
+          <option value="Stensjo">Stensjö dämme</option>
+          <option value="Tingstad">Tingstad</option>
+          <option value="Torshamnen">Torshamnen</option>
+        </select>
+        <label for="measureParameters">Mätningsparametrar:</label>
+        <select id="measureParameters" name="measureParameters">
+          <option value="level">Nivå</option>
+          <option value="levelDownstream">Nivå nedströms</option>
+          <option value="tapping">Tappning</option>
+          <option value="rainfall">Nederbörd</option>
+          <option value="flode">Flöde</option>
+        </select>
+    </div>
+    <div id="historic-data">
+    
+    </div>
+    
   
+  </section>
+    
+
+  </main>
 </body>
 </html>
