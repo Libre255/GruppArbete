@@ -6,6 +6,30 @@
           box-sizing: border-box;
 }
 
+#map {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 89vw;
+  height: 70vh;
+  border: black solid 2px
+}
+.marker {
+  background-image: url('icon.png');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.mapboxgl-popup {
+  max-width: 200px;
+}
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
   background-color: #dbd2cb;
@@ -97,14 +121,12 @@ header button:hover {
   font-weight: lighter;
 }
 
-#about .grid-container-about {
-  display: -ms-grid;
+#about  .grid-container-about {
   display: grid;
-  -ms-grid-columns: (2fr)[2];
-      grid-template-columns: repeat(2, 2fr);
-  grid-gap: 2rem;
+  grid-template-columns:repeat(2, 2fr);
+  grid-gap:2rem;
   width: 90%;
-  margin: 5.1rem 4rem;
+  margin:5.1rem 4rem;
 }
 
 #about .grid-item-text {
