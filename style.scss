@@ -111,7 +111,7 @@ header {
 
  
 }
-#time {
+#historic {
   margin:5.1rem 4rem;
   h2 {
     font-family: $fontFamilyHeaders;
@@ -120,6 +120,30 @@ header {
     margin: 1.5rem auto;
     letter-spacing: 0.2em;
   }
+  #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 70vh;
+}
+  .marker {
+    background-image: url('icon.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .mapboxgl-popup {
+    max-width: 200px;
+  }
+  .mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+
   p {
     font-family: $fontFamilyParagraphs;
     font-weight: lighter;
@@ -179,7 +203,7 @@ header {
     }
 
   }
-  #time {
+  #historic {
     h2 {
       font-size: 1.1em;
   }
