@@ -4,6 +4,9 @@ var LevelDownstream;
 var LevelDownstreamValue;
 var measureWords = ["Nivå", "Nivå nedströms", "Tappning", "Flöde", "Nederbörd"]
 var measureResults = []
+var dates = []
+var newDates = []
+var dateValues = []
 
 //Hämtar data med följande anrop: MeasureSites/{APPID}/{MEASURESITECODE}
 fetch("http://data.goteborg.se/RiverService/v1.1/MeasureSites/abc1cff9-4ac5-4bb0-b2ea-faa252240b0f?format=Json")
@@ -14,7 +17,7 @@ fetch("http://data.goteborg.se/RiverService/v1.1/MeasureSites/abc1cff9-4ac5-4bb0
         res = myJson;
         render()
         timeData = new Date()
-        console.log(timeData)
+        console.log(timeData.toDateString())
     });
 
 //Få access till kartan från mapbox
@@ -87,4 +90,56 @@ function placeMarkers() {
                     '</p></p>'))
             .addTo(map);
     });
+}
+
+
+//HISTORISK DATA
+//Hämta historisk data enligt inputvärden
+function getDate() {
+    fetch("http://data.goteborg.se/RiverService/v1.1/Measurements/abc1cff9-4ac5-4bb0-b2ea-faa252240b0f/Agnesberg/Level/2019-10-30/2019-11-04?format=Json")
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+            hist = myJson;
+            console.log(hist)
+            findBrakets()
+            reCount()
+            renderDates()
+        });
+}
+
+
+// //Hitta brackets för att plocka ur timestamp
+function findBrakets() {
+    hist.forEach(function (bracket, index) {
+        firstBracket = bracket.TimeStamp.indexOf("(");
+        secondBracket = bracket.TimeStamp.indexOf(")");
+        dateValues.push(hist[index].Value)
+        dates.push(hist[index].TimeStamp.slice(firstBracket + 1, secondBracket))
+    });
+}
+
+//Använd timestamp för att få ut ett nytt datum
+function reCount() {
+    dates.forEach(function (date) {
+        newDates.push(new Date(parseInt(date)))
+    })
+}
+
+//Tryck ut datum på sidan
+function renderDates() {
+    newDates.forEach(function (date, index) {
+        var histContainer = document.getElementById("historic-data")
+        var newP = document.createElement("p")
+        newP.innerText = (date.toDateString() + " värde = " + dateValues[index])
+        histContainer.appendChild(newP)
+    });
+}
+
+function refreshTime() {
+    var mapen = document.getElementById("time")
+    var mapLoaded = document.createElement("p")
+    mapLoaded.innerHTML = "Sidan laddades " +timeData
+    mapen.append(mapLoaded)
 }
