@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", (e) => {
+    var reloadButton = document.getElementById("reloadData")
+    reloadButton.addEventListener('click', function() {
+        refreshTime()
+    });
+    });
+
+var timeData = new Date().toLocaleDateString()
 var newGeojson;
 var map;
 var LevelDownstream;
@@ -15,9 +23,8 @@ fetch("http://data.goteborg.se/RiverService/v1.1/MeasureSites/abc1cff9-4ac5-4bb0
     })
     .then(function (myJson) {
         res = myJson;
+        refreshTime()
         render()
-        timeData = new Date()
-        console.log(timeData.toDateString())
     });
 
 //Få access till kartan från mapbox
@@ -132,14 +139,16 @@ function renderDates() {
     newDates.forEach(function (date, index) {
         var histContainer = document.getElementById("historic-data")
         var newP = document.createElement("p")
-        newP.innerText = (date.toDateString() + " värde = " + dateValues[index])
+        newP.innerText = (date.toLocaleDateString() + " värde = " + dateValues[index])
         histContainer.appendChild(newP)
     });
 }
 
 function refreshTime() {
-    var mapen = document.getElementById("time")
+    var mapen = document.getElementById("refresh")
     var mapLoaded = document.createElement("p")
-    mapLoaded.innerHTML = "Sidan laddades " +timeData
+    mapen.innerHTML = ""
+    mapLoaded.innerHTML = "Sidan laddades " +timeData +" "+new Date().toLocaleTimeString()
     mapen.append(mapLoaded)
 }
+
