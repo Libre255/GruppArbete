@@ -6,29 +6,7 @@
           box-sizing: border-box;
 }
 
-#map {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  width: 89vw;
-  height: 70vh;
-  border: black solid 2px
-}
-.marker {
-  background-image: url('icon.png');
-  background-size: cover;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.mapboxgl-popup {
-  max-width: 200px;
-}
-.mapboxgl-popup-content {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-}
+
 
 html {
   scroll-behavior: smooth;
@@ -137,47 +115,124 @@ header button:hover {
   margin-top: 3em;
 }
 
-#time {
-  margin: 5.1rem 4rem;
+
+#historic {
+  margin: 10em 4em;
 }
 
-#time h2 {
+#historic h2 {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 2.1em;
   text-transform: uppercase;
   margin: 1.5rem auto;
   letter-spacing: 0.2em;
 }
+#reloadData {
+  padding:0.4em;
+  margin-top:0.7em;
+  margin-bottom:4em;
+  font-family: "Roboto Mono", monospace;
+  font-weight: lighter;
 
-#time p {
+}
+#historic p {
   font-family: "Roboto Mono", monospace;
   font-weight: lighter;
   margin-bottom: 1.5em;
+  width: 45vw;
+}
+#historic img {
+  margin-top:0.2em;
+}
+#imgP {
+  margin: 0.5em 2em;
 }
 
-#time #form {
+#map {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 89vw;
+  height: 70vh;
+  
+}
+.marker {
+  background-image: url('icon.png');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.mapboxgl-popup {
+  max-width: 200px;
+}
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#historic #form {
   font-family: "Roboto Mono", monospace;
   font-weight: lighter;
 }
 
-#time #form input {
+#historic #form input {
   padding: 1em;
   font-family: "Roboto Mono", monospace;
   font-weight: lighter;
 }
 
-#time #form #station, #time #form #measureParameters {
+#historic #form #station, #historic #form #measureParameters {
   padding: 1em;
   font-family: "Roboto Mono", monospace;
   font-weight: lighter;
 }
-
-#time #historic-data {
+#form submit {
+  width: 20%;
+  background-color:rgb(184, 184, 184);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Roboto Mono", monospace;
+}
+#form button:hover {
+  background-color:gray;
+}
+#historic #historic-data {
   margin: 1.5rem auto;
   font-family: "Roboto Mono", monospace;
   font-weight: lighter;
 }
-
+/* footer
+-------------------------------------------------- */
+.flex-container { 
+  display: flex; 
+  flex-direction: row;
+  width:100%;
+  margin-top:3em;
+  margin-bottom:2em;
+  line-height:0.8em;
+}
+#info1 {
+  margin-left:1em;
+}
+#info2 {
+  flex-grow: 1;
+}
+#info3 {
+  margin-right:1em;
+}
+footer p{
+  font-size:0.75rem;
+  padding:0.5em;
+  text-align:center;
+  font-family: "Roboto Mono", monospace;
+  font-weight: lighter;
+}
 /* @Media
 -------------------------------------------------- */
 @media only screen and (max-width: 600px) {
@@ -208,7 +263,7 @@ header button:hover {
   #about h2 {
     font-size: 1.1em;
   }
-  #time h2 {
+  #historic h2 {
     font-size: 1.1em;
   }
 }
