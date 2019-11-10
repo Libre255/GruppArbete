@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
-    <script src="measurements.js"></script>
+    
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -53,49 +53,51 @@
       <h2>Historisk data</h2>
       <p>Här kan du hämta historisk data genom att välja datum, mätstation och vilka mätsparametrar du vill hämta.</p>
       <div id="form">
-          <form method="..." action="..." onsubmit="return checkForm(this);">
+        <form id="submitDate">
+          <!--Date From To This-->
           <label for="date">Datum fr.o.m:</label>
-          <input type="text" placeholder="dd/mm/yyyy" name="startdate">
-          <label for="date">t.o.m:</label>
-          <input type="text" id="end" name="endDate" placeholder="dd/mm/yyyy" >
+            <input type="date" id="startDate" placeholder="dd/mm/yyyy" name="startdate">
+            <label for="date">t.o.m:</label>
+            <input type="date" id="endDate" name="endDate" placeholder="dd/mm/yyyy" >
+          <!--Mätstation-->
           <label for="station">Mätstation:</label>
-          <select id="station" name="station">
-            <option value="Agnesberg">Agnesberg</option>
-            <option value="Arketjarn">Arketjärn</option>
-            <option value="Eriksberg">Eriksberg</option>
-            <option value="Garda">Gårda</option>
-            <option value="Harsjö">Härsjö</option>
-            <option value="Kalleredsbacken">Kålleredsbäcken</option>
-            <option value="Landvettersjons">Landvettersjöns dämme</option>
-            <option value="Levgrensvagen">Levgrensvägen</option>
-            <option value="Larjeholm">Lärjeholm</option>
-            <option value="Molndal">Mölndal C</option>
-            <option value="Nedsjons">Nedsjöns dämme</option>
-            <option value="Radasjon">Rådasjön</option>
-            <option value="Skars">Skårs led</option>
-            <option value="Slussen">Slussen</option>
-            <option value="Stensjo">Stensjö dämme</option>
-            <option value="Tingstad">Tingstad</option>
-            <option value="Torshamnen">Torshamnen</option>
-          </select>
-          <label for="measureParameters">Mätningsparametrar:</label>
-          <select id="measureParameters" name="measureParameters">
-            <option value="level">Nivå</option>
-            <option value="levelDownstream">Nivå nedströms</option>
-            <option value="tapping">Tappning</option>
-            <option value="rainfall">Nederbörd</option>
-            <option value="flode">Flöde</option>
-          </select>
-          <input type="submit" value="Skicka data"></p>
+            <select id="station" name="station">
+              <option value="Agnesberg">Agnesberg</option>
+              <option value="Arketjarn">Arketjärn</option>
+              <option value="Eriksberg">Eriksberg</option>
+              <option value="Garda">Gårda</option>
+              <option value="Harsjo">Härsjö</option>
+              <option value="Kalleredsbacken">Kålleredsbäcken</option>
+              <option value="Landvetter">Landvettersjöns dämme</option>
+              <option value="Levgrensvagen">Levgrensvägen</option>
+              <option value="Larjean">Lärjeholm</option>
+              <option value="MolndalCentrum">Mölndal C</option>
+              <option value="Nedsjon">Nedsjöns dämme</option>
+              <option value="Rada">Rådasjön</option>
+              <option value="Skars led">Skårs led</option>
+              <option value="Slussen">Slussen</option>
+              <option value="Stensjon">Stensjö dämme</option>
+              <option value="Tingstad">Tingstad</option>
+              <option value="Torshamnen">Torshamnen</option>
+            </select>
+            <!--MeasureParameters ^.^ /--->
+            <label for="measureParameters">Mätningsparametrar:</label>
+            <select id="measureParameters" name="measureParameters">
+              <option value="Level">Nivå</option>
+              <option value="LevelDownstream">Nivå nedströms</option>
+              <option value="Tapping">Tappning</option>
+              <option value="RainFall">Nederbörd</option>
+              <option value="Flow">Flöde</option>
+            </select>
+            <input type="submit" value="Skicka data" id="submitHistoriskBtn">
+          <input type="button" id="resetBtn" value="Reset"></input>
+        </form>
+        <div class="listOfMeasurments">
           
-          </form>
-      </div>
-      <div id="historic-data">
-        
-      </div>
-    
-  
+        </div>
+    </div>
   </section>
+  
   </main>
   <!--Footer--> 
   <footer>
@@ -106,13 +108,14 @@
         </div>
         <div id="info2">
           <p>+46 784 36 78 89</p>
-          <p>hej@molndalsan.se</p>
+          <p>dab@420.se</p>
         </div>
         <div id="info3">
           <p>göteborgsvägen 66</p>
           <p>41667 göteborg</p>
         </div> 
       </div>  
-  </footer>   
+  </footer> 
+  <script src="measurements.js"></script>  
 </body>
 </html>
