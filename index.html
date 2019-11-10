@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vattennivån i Mölndalsån</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="GothenburgData.js"></script>
+  <div id="form">
+    <form method="..." action="..." id="submitDate">
+      <!--Date From To This-->
+      <label for="date">Datum fr.o.m:</label>
+        <input type="date" id="startDate" placeholder="dd/mm/yyyy" name="startdate">
+        <label for="date">t.o.m:</label>
+        <input type="date" id="endDate" name="endDate" placeholder="dd/mm/yyyy" >
+      <!--Mätstation-->
+      <label for="station">Mätstation:</label>
+        <select id="station" name="station">
+          <option value="Agnesberg">Agnesberg</option>
+          <option value="Arketjarn">Arketjärn</option>
+          <option value="Eriksberg">Eriksberg</option>
+          <option value="Garda">Gårda</option>
+          <option value="Harsjo">Härsjö</option>
+          <option value="Kalleredsbacken">Kålleredsbäcken</option>
+          <option value="Landvetter">Landvettersjöns dämme</option>
+          <option value="Levgrensvagen">Levgrensvägen</option>
+          <option value="Larjean">Lärjeholm</option>
+          <option value="MolndalCentrum">Mölndal C</option>
+          <option value="Nedsjon">Nedsjöns dämme</option>
+          <option value="Rada">Rådasjön</option>
+          <option value="Skars led">Skårs led</option>
+          <option value="Slussen">Slussen</option>
+          <option value="Stensjon">Stensjö dämme</option>
+          <option value="Tingstad">Tingstad</option>
+          <option value="Torshamnen">Torshamnen</option>
+        </select>
+        <!--MeasureParameters ^.^ /--->
+        <label for="measureParameters">Mätningsparametrar:</label>
+        <select id="measureParameters" name="measureParameters">
+          <option value="Level">Nivå</option>
+          <option value="LevelDownstream">Nivå nedströms</option>
+          <option value="Tapping">Tappning</option>
+          <option value="RainFall">Nederbörd</option>
+          <option value="Flow">Flöde</option>
+        </select>
+      <button>Skicka</button>
+      <button id="resetBtn">Reset</button>
+    </form>
+    <div class="listOfMeasurments">
+      
+    </div>
+</div>  
+<script src="GothenburgData.js"></script>
 </body>
 </html>
