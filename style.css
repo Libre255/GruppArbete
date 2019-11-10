@@ -116,11 +116,11 @@ header button:hover {
 }
 
 
-#historic {
+#measurementStations {
   margin: 10em 4em;
 }
 
-#historic h2 {
+#measurementStations h2 {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 2.1em;
   text-transform: uppercase;
@@ -135,13 +135,16 @@ header button:hover {
   font-weight: lighter;
 
 }
-#historic p {
+#measurementStations p {
   font-family: "Roboto Mono", monospace;
   font-weight: lighter;
   margin-bottom: 1.5em;
+  
+}
+#measurementP {
   width: 45vw;
 }
-#historic img {
+#measurementStations img {
   margin-top:0.2em;
 }
 #imgP {
@@ -153,9 +156,10 @@ header button:hover {
   top: 0;
   bottom: 0;
   width: 89vw;
-  height: 70vh;
+  height: 90vh;
   
 }
+
 .marker {
   background-image: url('icon.png');
   background-size: cover;
@@ -169,21 +173,31 @@ header button:hover {
 }
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  
+
+}
+.mapboxgl-popup-content h3 {
+  margin-bottom:1em;
+}
+.mapboxgl-popup-close-button {
+  padding:1em;
 }
 
-#historic #form {
+#measurementStations #form {
   font-family: "Roboto Mono", monospace;
   font-weight: lighter;
 }
 
-#historic #form input {
+#measurementStations #form input {
   padding: 1em;
   font-family: "Roboto Mono", monospace;
   font-weight: lighter;
 }
 
-#historic #form #station, #historic #form #measureParameters {
+#measurementStations #form #station, #measurementStations #form #measureParameters {
   padding: 1em;
   font-family: "Roboto Mono", monospace;
   font-weight: lighter;
@@ -202,7 +216,7 @@ header button:hover {
 #form button:hover {
   background-color:gray;
 }
-#historic #historic-data {
+#measurementStations #historic-data {
   margin: 1.5rem auto;
   font-family: "Roboto Mono", monospace;
   font-weight: lighter;
@@ -263,8 +277,33 @@ footer p{
   #about h2 {
     font-size: 1.1em;
   }
-  #historic h2 {
+  #measurementStations h2 {
     font-size: 1.1em;
   }
+  #measurementStations{
+    margin: 1em 2.1em;
+    
+  }
+  #measurementP {
+    width: 60vw;
+  }
+  #map {
+    width: 100%;
+  }
+  .mapboxgl-popup-content {
+    max-height: 300px;
+    max-width: 150px;
+    font-size: 0.8em;
+    padding:5px 10px 2px;
+    
+  }
+ 
 }
+.flex-container {
+  display: block;
+}
+#info1,#info2, #info3 {
+  padding:1em;
+}
+
 /*# sourceMappingURL=style.css.map */
