@@ -18,7 +18,7 @@ info()
 let formOfDate = document.getElementById("submitDate")
 let ListDatesAndValues = document.querySelector(".listOfMeasurments")
 formOfDate.addEventListener("submit", historiskData);     
-console.log(ListDatesAndValues.children.length);
+
 async function historiskData(e){   
     e.preventDefault()
     try{
