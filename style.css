@@ -6,7 +6,28 @@
           box-sizing: border-box;
 }
 
-
+#map {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 88vw;
+  height: 70vh;
+}
+.marker {
+  background-image: url('icon.png');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.mapboxgl-popup {
+  max-width: 200px;
+}
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
 
 html {
   scroll-behavior: smooth;
