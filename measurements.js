@@ -114,7 +114,7 @@ async function historiskData(e){
      let measurmentType = document.getElementById("measureParameters").value
      let getData = await fetch(`http://data.goteborg.se/RiverService/v1.1/Measurements/d56cf30a-f156-4636-8682-73d3095f1ff0/${station}/${measurmentType}/${startDate}/${endDate}?format=Json`)
      let Data = await getData.json()
-     //Adding Title To each List according to the measurment Type  & Error Handling if Measurment Not Found ^_^/
+     //Adding Title To each List according to the measurment Type & Error Handling if Measurment Not Found ^_^/
       if(Data.length == 0){
         alert("Data Not Found")
       }else{
@@ -129,12 +129,13 @@ async function historiskData(e){
                 onlyDateCode.lastIndexOf(")")
                 ); 
             let converIntoNr = parseFloat(dateString);
-            let actualDate = new Date(converIntoNr).toString();
+            let toStringDate = new Date(converIntoNr).toString();
+            let actualDate = toStringDate.slice(0,16);
             //Get Values
             let Values = element.Value;
             //Imerge into HTML :D
             ListDatesAndValues.innerHTML += `<ul id="historiskData">
-            <ol>${actualDate} <span>${Values}</span></ol>
+            <ol>${actualDate} - Value <span>${Values}</span></ol>
             </ul>`
             
         });

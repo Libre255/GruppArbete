@@ -338,7 +338,6 @@ footer p{
   height: 30em;
   width: 50em;
   background-color: rgb(255, 255, 255);
-  border: 3px solid black;
   border-radius: 25px;
   margin: 0 auto;
   overflow: scroll;
@@ -355,13 +354,12 @@ footer p{
 .listOfMeasurments ul {
   margin-left: 2em;
   margin-right: 2em;
-  margin-top: 2em;
   text-align: center;
 }
 
 .listOfMeasurments ul ol {
   margin: 10px 0;
-  border: 3px solid black;
+  border: 1px solid black;
   padding-top: 1em;
   padding-bottom: 1em;
   font-size: 1em;
@@ -369,7 +367,7 @@ footer p{
 }
 
 .listOfMeasurments ul ol span {
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 0.5em;
 }
 
