@@ -151,7 +151,6 @@ async function historiskData(e){
     
 }
 
-// Sist Laddades Mappen Datum Code
 function refreshTime() {
     var mapen = document.getElementById("refresh")
     var mapLoaded = document.createElement("p")

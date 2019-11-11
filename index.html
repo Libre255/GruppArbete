@@ -43,9 +43,9 @@
         
       <h2 id="measurementHeader">Mätstationer</h2>
       <p id="measurementP">Mölndalsån är ett över 40 kilometer långt vattensystem som rinner från Nedsjöarna i Hindås via Landvettersjön, till Rådasjön och Stensjön i Mölndal och kanalerna i cen-trala Göteborg, för att till slut mynna ut i Göta Älv. Det finns sjutton mätstationer och dessa är utmärkta på kartan nedan. Genom att klicka på varje mätstation visas namnet samt dess parametrar.</p>
-    
+      <img src="icon.png" alt="icon" align="left"> <p id="imgP">Mätstationer (Nivå = RH2000, Flöde = m3/s, Nederbörd = mm/h)</p>
     <section id="map">
-        <img src="icon.png" alt="icon" align="left"> <p id="imgP">Mätstationer</p>
+        
     </section> 
     <div id="refresh">
     </div>
@@ -80,7 +80,6 @@
               <option value="Tingstad">Tingstad</option>
               <option value="Torshamnen">Torshamnen</option>
             </select>
-            <!--MeasureParameters ^.^ /--->
             <label for="measureParameters">Mätningsparametrar:</label>
             <select id="measureParameters" name="measureParameters">
               <option value="Level">Nivå</option>
@@ -92,15 +91,17 @@
             <input type="submit" value="Skicka data" id="submitHistoriskBtn">
           <input type="button" id="resetBtn" value="Reset"></input>
         </form>
-        <div class="listOfMeasurments">
+        <ul class="listOfMeasurments">
           
-        </div>
+        </ul>
     </div>
+  </div>
   </section>
   
   </main>
-  <!--Footer--> 
+  
   <footer>
+    
       <div class="flex-container">
         <div id="info1">
           <p>Vattennivån i Mölndalsån</p>
@@ -118,4 +119,4 @@
   </footer> 
   <script src="measurements.js"></script>  
 </body>
-</html>
+</html> 
