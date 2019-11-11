@@ -303,28 +303,44 @@ footer p{
     font-size: 1.1em;
   }
   #measurementStations{
-    margin: 1em 2.1em;
+    margin: 0;
     
   }
   #measurementP {
     width: 60vw;
   }
-  #map {
-    width: 100%;
+  #measurementStations h2, #histricP, #measurementP, #form , button{
+    margin: 1em 2.1em;
   }
+ 
+#map {
+  width: 95.7vw;
+  
+}
+
   .mapboxgl-popup-content {
     max-height: 300px;
     max-width: 150px;
     font-size: 0.8em;
     padding:5px 10px 2px;
   }
+  .mapboxgl-popup-close-button {
+    padding:0;
+  }
   .flex-container {
     display: block;
+    margin:auto;
+    
   }
   #info1,#info2, #info3 {
     padding:1em;
   }
 }
+html {
+  
+  border: 0.5em solid white;
+}
+
 
 
 /*# sourceMappingURL=style.css.map */
