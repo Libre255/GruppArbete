@@ -3,7 +3,7 @@ function checkForm(form) {
   regDate = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
 
   if(form.startdate.value != '') {
-    if(regs = form.startdate.value.match(regDate) && (regs = form.endDate.value.match(regDate))){
+    if(regs = form.startdate.value.match(regDate)){
       // dag värde mellan 1 och 31
       if(regs[1] < 1 || regs[1] > 31) {
         alert("Invalid value for day: " + regs[1]);
