@@ -100,49 +100,6 @@ function placeMarkers() {
 }
 
 
-//HISTORISK DATA
-//Hämta historisk data enligt inputvärden
-function getDate() {
-    fetch("http://data.goteborg.se/RiverService/v1.1/Measurements/abc1cff9-4ac5-4bb0-b2ea-faa252240b0f/Agnesberg/Level/2019-10-30/2019-11-04?format=Json")
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (myJson) {
-            hist = myJson;
-            console.log(hist)
-            findBrakets()
-            reCount()
-            renderDates()
-        });
-}
-
-
-// //Hitta brackets för att plocka ur timestamp
-function findBrakets() {
-    hist.forEach(function (bracket, index) {
-        firstBracket = bracket.TimeStamp.indexOf("(");
-        secondBracket = bracket.TimeStamp.indexOf(")");
-        dateValues.push(hist[index].Value)
-        dates.push(hist[index].TimeStamp.slice(firstBracket + 1, secondBracket))
-    });
-}
-
-//Använd timestamp för att få ut ett nytt datum
-function reCount() {
-    dates.forEach(function (date) {
-        newDates.push(new Date(parseInt(date)))
-    })
-}
-
-//Tryck ut datum på sidan
-function renderDates() {
-    newDates.forEach(function (date, index) {
-        var histContainer = document.getElementById("historic-data")
-        var newP = document.createElement("p")
-        newP.innerText = (date.toLocaleDateString() + " värde = " + dateValues[index])
-        histContainer.appendChild(newP)
-    });
-}
 //HISTORISK DATA by Tony Montana
 let formOfDate = document.getElementById("submitDate");
 let ListDatesAndValues = document.querySelector(".listOfMeasurments");
@@ -177,9 +134,9 @@ async function historiskData(e){
             //Get Values
             let Values = element.Value;
             //Imerge into HTML :D
-            ListDatesAndValues.innerHTML += `
-            <li>${actualDate} - Value <span>${Values}</span></li>
-            `
+            ListDatesAndValues.innerHTML += `<ul id="historiskData">
+            <ol>${actualDate} - Value <span>${Values}</span></ol>
+            </ul>`
             
         });
         //Reset Button ::D

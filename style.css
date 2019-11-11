@@ -212,6 +212,7 @@ header button:hover {
 #measurementStations #form {
   font-family: "Roboto Mono", monospace;
   font-weight: lighter;
+  text-align: center;
 }
 
 #measurementStations #form input {
@@ -395,6 +396,5 @@ footer p{
     margin:1em 0em;
   }
 }
-
 
 /*# sourceMappingURL=style.css.map */
