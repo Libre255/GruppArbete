@@ -134,9 +134,9 @@ async function historiskData(e){
             //Get Values
             let Values = element.Value;
             //Imerge into HTML :D
-            ListDatesAndValues.innerHTML += `<ul id="historiskData">
-            <ol>${actualDate} - Value <span>${Values}</span></ol>
-            </ul>`
+            ListDatesAndValues.innerHTML += `
+            <li>${actualDate} - Value <span>${Values}</span></li>
+            `
             
         });
         //Reset Button ::D
