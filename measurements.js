@@ -118,6 +118,7 @@ async function historiskData(e){
       if(Data.length == 0){
         alert("Data Not Found")
       }else{
+        ListDatesAndValues.innerHTML = ""
         ListDatesAndValues.innerHTML +=`<span id="titleType">${measurmentType} of ${station}</span>`
       }  
      //Adjusting Data and Inserting into DOM 
